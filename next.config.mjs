@@ -4,7 +4,14 @@ import "./src/env.mjs";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // your config options...
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
