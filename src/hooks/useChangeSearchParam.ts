@@ -1,7 +1,5 @@
-import { ParamSchema } from "@/lib/ParamSchema";
 import { Change, changeSearchParam } from "@/lib/changeSearchParam";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import z from "zod";
 
 export default function useChangeSearchParam() {
   const router = useRouter();
