@@ -31,9 +31,9 @@ export default function OrderBySelect({ value: _value }: { value?: OrderBy }) {
 
   return (
     <div className="flex flex-col items-start gap-1.5 w-full">
-      <Label htmlFor="color">Sort by</Label>
+      <Label htmlFor="order">Sort by</Label>
       <Select onValueChange={onSelect} value={value}>
-        <SelectTrigger className="w-full">
+        <SelectTrigger id="order" className="w-full">
           <SelectValue placeholder="Sort by" />
         </SelectTrigger>
         <SelectContent>

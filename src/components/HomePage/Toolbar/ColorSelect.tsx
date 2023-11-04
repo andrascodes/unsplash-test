@@ -12,7 +12,7 @@ import {
 import useChangeSearchParam from "@/hooks/useChangeSearchParam";
 import { COLOR_IDS, ColorId } from "@/lib/ParamSchema";
 
-const COLOR_MAP: Record<ColorId, string> = {
+export const COLOR_MAP: Record<ColorId, string> = {
   black: "Black",
   black_and_white: "Black and white",
   blue: "Blue",
@@ -39,8 +39,8 @@ export default function ColorSelect({ value }: { value?: ColorId }) {
   return (
     <div className="flex flex-col items-start gap-1.5 w-full">
       <Label htmlFor="color">Color</Label>
-      <Select name="color" onValueChange={onSelect} value={value}>
-        <SelectTrigger className="w-full">
+      <Select onValueChange={onSelect} value={value}>
+        <SelectTrigger id="color" className="w-full">
           <SelectValue placeholder="" />
         </SelectTrigger>
         <SelectContent>

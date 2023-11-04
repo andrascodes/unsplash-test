@@ -23,7 +23,8 @@ export default function SearchInput({ value: _value }: { value?: string }) {
     <div className="flex flex-col items-start gap-1.5 w-full">
       <Label htmlFor="search">Search</Label>
       <Input
-        name="search"
+        data-testid="search"
+        id="search"
         type="search"
         placeholder="Type what you're looking for"
         value={value}

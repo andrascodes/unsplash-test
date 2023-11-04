@@ -7,7 +7,10 @@ import { PropsWithChildren } from "react";
 
 export function MasonryLayout({ children }: PropsWithChildren<{}>) {
   return (
-    <div className="columns-1 flex flex-col items-center justify-center gap-4 sm:block sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>*:not(:first-child)]:mt-8">
+    <div
+      data-testid="gallery"
+      className="columns-1 flex flex-col items-center justify-center gap-4 sm:block sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>*:not(:first-child)]:mt-8"
+    >
       {children}
     </div>
   );

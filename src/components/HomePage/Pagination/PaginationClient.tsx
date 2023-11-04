@@ -19,11 +19,21 @@ export function PaginationUI({
 }>) {
   return (
     <div className="flex items-center justify-center gap-4">
-      <Button variant="outline" onClick={toPrevPage} disabled={prevDisabled}>
+      <Button
+        data-testid="prev"
+        variant="outline"
+        onClick={toPrevPage}
+        disabled={prevDisabled}
+      >
         <ChevronLeftIcon className="h-4 w-4" />
       </Button>
       {children}
-      <Button variant="outline" onClick={toNextPage} disabled={nextDisabled}>
+      <Button
+        data-testid="next"
+        variant="outline"
+        onClick={toNextPage}
+        disabled={nextDisabled}
+      >
         <ChevronRightIcon className="h-4 w-4" />
       </Button>
     </div>
@@ -67,7 +77,10 @@ export default function PaginationClient({
   return (
     <PaginationUI {...uiParams}>
       <p>
-        <span className="font-medium">{current}</span> of {total}
+        <span data-testid="current-page" className="font-medium">
+          {current}
+        </span>{" "}
+        of <span data-testid="last-page">{total}</span>
       </p>
     </PaginationUI>
   );
